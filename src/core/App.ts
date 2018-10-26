@@ -1,6 +1,6 @@
 import * as express from "express";
 import { Routes } from "./Routes";
-
+import * as open from "open";
 export class App {
     
     private app: express.Application;
@@ -14,6 +14,7 @@ export class App {
     start(){
         this.app.listen(8000, () => {
             console.log("Server is running on http://localhost:8000");
+            open('http://localhost:8000/testGet')
         });
     }
 }

@@ -1,10 +1,14 @@
 import * as express from "express";
+import { Routes } from "./Routes";
 
 export class App {
+    
     private app: express.Application;
 
     constructor(){
+        console.log('ghfjg',Routes);
         this.app = express();
+        this.app.use((<any>Routes).getRoutes());
     }
 
     start(){

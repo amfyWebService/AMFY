@@ -1,27 +1,7 @@
 [
     {
-       "method"    : "get",
-       "path"      : "/testGet",
-       "controller": "defaultController"
-    },
-    {
-       "method"    : "post",
-       "path"      : "/testPost",
-       "controller": "defaultController"
-    },
-    {
-       "method"    : "put",
-       "path"      : "/testPut",
-       "controller": "defaultController"
-    },
-    {
-       "method"    : "patch",
-       "path"      : "/testPatch",
-       "controller": "defaultController"
-    },
-    {
-       "method"    : "delete",
-       "path"      : "/testDelete",
-       "controller": "defaultController"
+       "method"    : "all",
+       "path"      : "/",
+       "controller": "DefaultController:index"
     }
 ]

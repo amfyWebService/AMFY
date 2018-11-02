@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { DefaultController } from "../controllers/defaultController";
+import { App } from "./App";
 const allRoutes:IRoute[] = require('../routes.json')
 
 export enum HTTPVerb {
@@ -16,9 +16,8 @@ export class Routes {
     static getRoutes() {
         let router = Router();
         
+        
         for (const route of allRoutes) {
-            let controller
-            
             if (
                 typeof route !== 'object'
                 || !~Object.values(HTTPVerb).indexOf(route.method)
@@ -26,14 +25,31 @@ export class Routes {
             ) {
                 throw new Error('An issue with the route.json file')
             }
-            let method = route.method
-            let path   = route.path
+            
+            let fn         = route.controller.split(':')
+            let controller = this.getController(fn[0]);
+            if(!controller || fn.length < 2){
+                console.warn('Error in route', route);
+                
+            } else {
+                let method = route.method
+                let path   = route.path
 
-            router[method](path, DefaultController.index)
-
+                router[method](path, controller[fn[1]]);
+            }
         }
 
         return router;
+    }
+
+    private static getController(ctrlName: string){
+        for(let item of App.controllers){
+            if(item.name === ctrlName){
+                return item;
+            }
+        }
+
+        return null;
     }
 }
 

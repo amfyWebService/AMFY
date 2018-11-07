@@ -40,6 +40,9 @@ To run the application in prod mode
 ```
 npm prod
 ```
+## Authors :space_invader:
+
+* **The Homies** - [AMFY-Team](https://github.com/orgs/amfyWebService/teams/amfy)
 
 ## License
 

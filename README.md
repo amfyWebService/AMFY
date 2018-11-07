@@ -2,7 +2,7 @@
 
 It's a framework that allow you to build a nodejs app in TypeScript !
 
-## Getting Started
+## Getting Started :rocket:
 
 ```
 git clone https://github.com/amfyWebService/AMFY.git
@@ -14,14 +14,14 @@ You need to have Node installed on your computer
 
 * [Nodejs](https://nodejs.org/en/download/)
 
-### Installing
+### Installing :page_with_curl:
 
 To run the Framework, follow these steps
 
 ```
 npm install 
 ```
-
+To start the application in developement mode 
 ```
 npm start
 ```
@@ -33,7 +33,12 @@ PS D:\> npm start
 > amfy-framework@1.0.0 start D:\
 > ts-node index.ts
 
-Server is running on http://localhost:8000
+Server is running on http://localhost:3333
+```
+
+To run the application in prod mode 
+```
+npm prod
 ```
 
 ## License

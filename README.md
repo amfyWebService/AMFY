@@ -1,4 +1,4 @@
-# AMFY Nodejs Framework
+# AMFY Nodejs Framework [![version](https://img.shields.io/badge/version-1.0-yellow.svg)](https://semver.org)
 
 It's a framework that allow you to build a nodejs app in TypeScript !
 
